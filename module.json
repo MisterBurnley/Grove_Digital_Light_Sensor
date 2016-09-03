@@ -1,7 +1,11 @@
 {
     "header_file": "Digital_Light_TSL2561.h",
     "class_name": "TSL2561",
-    "arguments": 
+    "arguments":[
+        { 
+        
+    }
+    ],
     "outputs": {
         "Lux": {
             "type": "std_msgs/Float32"
