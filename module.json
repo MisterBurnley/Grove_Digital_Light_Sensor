@@ -1,5 +1,5 @@
 {
-    "header_file": "openag_dht22.h",
+    "header_file": "Digital_Light_TSL2561.h",
     "class_name": "Dht22",
     "arguments": [
         {
