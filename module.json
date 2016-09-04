@@ -3,8 +3,9 @@
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
         { 
-         "name": "I2C",
-         "type": "dont know yet"
+         "name": "i2c_address",
+         "type": "int",
+         "default": 0x39
     }
     ],
     "dependencies": [
@@ -12,7 +13,7 @@
         ],
     "outputs": {
         "Lux": {
-            "type": "dont know yet"
+            "type": "std_msgs/Int32"
         }
     }
 }
