@@ -10,7 +10,7 @@
         }
     ],
     "outputs": {
-        "Lux": {
+        "readVisibleLux": {
             "type": "std_msgs/Float32"
         }
     },
