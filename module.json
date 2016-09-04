@@ -11,7 +11,7 @@
     ],
     "outputs": {
         "readVisibleLux": {
-            "type": "uInt16"
+            "type": "std_msgs/UInt16"
         }
     },
     "dependencies": [
