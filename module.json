@@ -3,7 +3,7 @@
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
         { 
-            "name": "i2c_address",
+            "name": "TSL2561_address",
             "type": "int",
             "default": 39
         }
