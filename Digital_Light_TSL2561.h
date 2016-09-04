@@ -32,7 +32,7 @@
 #define Digital_Light_TSL2561_H
 
 #include "Arduino.h"
-#include <wire>
+#include <wire.h>
 
 #include <openag_module.h>
 #include <std_msgs/UInt16.h>
