@@ -11,7 +11,7 @@
     ],
     "inputs": {
         "readVisibleLux": {
-            "type": "int"
+            "type": "std_msgs/Float32"
         }
     },
     "dependencies": [
