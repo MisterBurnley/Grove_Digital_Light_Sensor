@@ -31,7 +31,13 @@
 #ifndef Digital_Light_TSL2561_H
 #define Digital_Light_TSL2561_H
 
-#include <Arduino.h>
+#include "Arduino.h"
+
+
+#include <openag_module.h>
+#include <std_msgs/UInt16.h>
+#include <std_msgs/UInt8MultiArray.h>
+
 
 #define  TSL2561_Control  0x80
 #define  TSL2561_Timing   0x81
