@@ -8,8 +8,8 @@
         }
     ],
     "outputs": {
-        "readVisibleLux": {
-            "type": "std_msgs/Float32"
+        "light_illuminence": {
+            "type": "std_msgs/UInt16"
         }
     },
     "dependencies": [
