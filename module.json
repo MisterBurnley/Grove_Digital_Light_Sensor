@@ -4,9 +4,7 @@
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
         { 
-            "name": "TSL2561_address",
-            "type": "int",
-            "default": 39
+        
         }
     ],
     "outputs": {
