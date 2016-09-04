@@ -11,7 +11,7 @@
     ],
     "outputs": {
         "Lux": {
-            "type": "std_msgs/Int32"
+            "type": "std_msgs/Float32"
         }
     },
     "dependencies": [
