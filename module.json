@@ -9,7 +9,7 @@
             "default": 39
         }
     ],
-    "outputs": {
+    "inputs": {
         "readVisibleLux": {
             "type": "std_msgs/UInt16"
         }
