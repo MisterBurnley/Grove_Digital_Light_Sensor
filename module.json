@@ -9,8 +9,8 @@
             "default": 39
         }
     ],
-    "inputs": {
-        "readVisibleLux": {
+    "outputs": {
+        "VisibleLux": {
             "type": "std_msgs/Float32"
         }
     },
