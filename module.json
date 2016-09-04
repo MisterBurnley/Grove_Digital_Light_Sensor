@@ -7,6 +7,9 @@
          "type": "dont know yet"
     }
     ],
+    "dependencies": [
+        {"type": "git", "url", "http://github.com/OpenAgInitiative/openag_firmware_module.git"}
+        ],
     "outputs": {
         "Lux": {
             "type": "dont know yet"
