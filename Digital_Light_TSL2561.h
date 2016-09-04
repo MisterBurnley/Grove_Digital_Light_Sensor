@@ -37,6 +37,11 @@
 #include <openag_module.h>
 #include <std_msgs/UInt16.h>
 #include <std_msgs/UInt8MultiArray.h>
+#include <std_msgs/Empty.h>
+#include <std_msgs/Float32.h>
+
+
+
 
 
 #define  TSL2561_Control  0x80
