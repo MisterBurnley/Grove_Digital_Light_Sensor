@@ -1,5 +1,5 @@
 {
-    "description": "Driver for the Grove TSL2561 Digital Light Sensor"
+    "description": "Driver for the Grove TSL2561 Digital Light Sensor",
     "class_name": "GroveTSL2561",
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
