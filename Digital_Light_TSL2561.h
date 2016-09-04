@@ -111,7 +111,7 @@
 #define K8C 0x029a   // 1.3 * 2^RATIO_SCALE
 #define B8C 0x0000   // 0.000 * 2^LUX_SCALE
 #define M8C 0x0000   // 0.000 * 2^LUX_SCALE
-class TSL2561_CalculateLux
+class TSL2561_CalculateLux : public Module
 {
  public:
   signed long readVisibleLux();
