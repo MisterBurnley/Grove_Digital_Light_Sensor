@@ -1,5 +1,5 @@
 {
-    "name": "openag_digital_light_TSL2561",
+    "name": "GroveTSL2561",
     "keywords": "openag, grove, digitallight",
     "description": "OpenAg driver for the Grove digital light sensor TSL2561",
     "repository": {
