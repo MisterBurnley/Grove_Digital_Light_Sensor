@@ -133,7 +133,7 @@ class TSL2561_CalculateLux : public Module
   unsigned long lux;
 
  };
-extern TSL2561_CalculateLux  TSL2561;
+//extern TSL2561_CalculateLux  TSL2561;
 #endif
 
 
