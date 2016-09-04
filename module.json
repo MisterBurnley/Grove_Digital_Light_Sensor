@@ -3,17 +3,17 @@
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
         { 
-         "name": "i2c_address",
-         "type": "int",
-         "default": 39
-    }
+            "name": "i2c_address",
+            "type": "int",
+            "default": 39
+        }
     ],
-    "dependencies": [
-        {"type": "git", "url": "http://github.com/OpenAgInitiative/openag_firmware_module.git"}
-        ],
     "outputs": {
         "Lux": {
             "type": "std_msgs/Int32"
         }
-    }
+    },
+    "dependencies": [
+        {"type": "git", "url": "http://github.com/OpenAgInitiative/openag_firmware_module.git"}
+    ]
 }
