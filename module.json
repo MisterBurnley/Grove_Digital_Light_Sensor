@@ -1,6 +1,6 @@
 {
     "description": "Driver for the Grove TSL2561 Digital Light Sensor",
-    "class_name": "GroveTSL2561",
+    "class_name": "TSL2561_CalclateLux",
     "header_file": "Digital_Light_TSL2561.h",
     "arguments":[
         { 
