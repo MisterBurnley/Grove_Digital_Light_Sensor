@@ -113,13 +113,20 @@
 #define M8C 0x0000   // 0.000 * 2^LUX_SCALE
 class TSL2561_CalculateLux : public Module
 {
- public:
+
+
+public:
+  void begin();
+  void update();
+  bool get_light_illuminance(std_msgs::UInt16 &msg);
   signed long readVisibleLux();
   unsigned long calculateLux(unsigned int iGain, unsigned int tInt,int iType);
   void getLux(void);
   void init(void);
   uint8_t readRegister(int deviceAddress, int address);
   void writeRegister(int deviceAddress, int address, uint8_t val);
+
+
  private:
   uint8_t CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;
   uint16_t ch0,ch1;
