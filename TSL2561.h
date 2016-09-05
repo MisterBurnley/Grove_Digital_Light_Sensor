@@ -1,5 +1,5 @@
 /*
- * Digital_Light_TSL2561.h
+ * TSL2561.h
  * A library for TSL2561
  *
  * Copyright (c) 2012 seeed technology inc.
