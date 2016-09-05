@@ -15,7 +15,7 @@ class TSL2561 : public Module {
   bool get_lux(std_msgs::Int32 &msg);
   
   private:
-  TSL2561_I2C_sensor;
+  TSL2561_I2C _sensor;
   uint32_t _init_time;
   bool _initializing;
   uint32_t _time_of_last_reading;
