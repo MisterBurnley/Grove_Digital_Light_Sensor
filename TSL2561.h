@@ -32,14 +32,6 @@
 #define _TSL2561_H_
 
 #include "Arduino.h"
-#include <Wire.h>
-
-#include <openag_module.h>
-#include <std_msgs/UInt16.h>
-#include <std_msgs/UInt8MultiArray.h>
-#include <std_msgs/Empty.h>
-#include <std_msgs/Float32.h>
-
 
 #define  TSL2561_Control  0x80
 #define  TSL2561_Timing   0x81
@@ -112,6 +104,7 @@
 class TSL2561_CalculateLux
 {
   public:
+  signed long readVisibleLux();
   unsigned long calculateLux(unsigned int iGain, unsigned int tInt,int iType);
   void getLux(void);
   void init(void);
