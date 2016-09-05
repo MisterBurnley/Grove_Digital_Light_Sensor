@@ -16,7 +16,7 @@ class TSL2561 : public Module {
   
   private:
   TSL2561_I2C_sensor;
-  uint32_t_init_time;
+  uint32_t _init_time;
   bool _initializing;
   uint32_t _time_of_last_reading;
   const static uint32_t _min_update_interval = 2000;
