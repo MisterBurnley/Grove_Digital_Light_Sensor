@@ -10,7 +10,6 @@ void TSL2561::begin() {
 // read from the sensor and output lux reading
 void TSL2561::update() {
   uint32_t curr_time = millis();
-  Wire.begin();
   TSL2561.readVisibleLux();
   
 }
