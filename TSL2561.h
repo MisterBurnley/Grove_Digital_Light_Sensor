@@ -28,8 +28,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#ifndef Digital_Light_TSL2561_H
-#define Digital_Light_TSL2561_H
+#ifndef TSL2561_H
+#define TSL2561_H
 
 #include "Arduino.h"
 #include <Wire.h>
