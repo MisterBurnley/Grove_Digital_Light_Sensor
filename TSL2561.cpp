@@ -31,6 +31,8 @@
 #include <Digital_Light_TSL2561.h>
 #include <Arduino.h>
 #include <Wire.h>
+
+
 uint8_t TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
 {
 
@@ -45,7 +47,7 @@ uint8_t TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
      return value;
 }
 
-void TSL2561_CalculateLux::writeRegister(int deviceAddress, int address, uint8_t val)
+void TSL2561_CalculateLux::writeRegister(int deviceAddress, int address, int val)
 {
      Wire.beginTransmission(deviceAddress);  // start transmission to device
      Wire.write(address);                    // send register address
@@ -53,6 +55,7 @@ void TSL2561_CalculateLux::writeRegister(int deviceAddress, int address, uint8_t
      Wire.endTransmission();                 // end transmission
      //delay(100);
 }
+
 void TSL2561_CalculateLux::getLux(void)
 {
     CH0_LOW=readRegister(TSL2561_Address,TSL2561_Channal0L);
@@ -64,6 +67,7 @@ void TSL2561_CalculateLux::getLux(void)
     ch0 = (CH0_HIGH<<8) | CH0_LOW;
     ch1 = (CH1_HIGH<<8) | CH1_LOW;
 }
+
 void TSL2561_CalculateLux::init()
 {
    writeRegister(TSL2561_Address,TSL2561_Control,0x03);  // POWER UP
@@ -88,6 +92,7 @@ signed long TSL2561_CalculateLux::readVisibleLux()
    }
    return calculateLux(0, 0, 0);  //T package, no gain, 13ms
 }
+
 unsigned long TSL2561_CalculateLux::calculateLux(unsigned int iGain, unsigned int tInt,int iType)
 {
  switch (tInt)
