@@ -28,8 +28,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#ifndef TSL2561_H
-#define TSL2561_H
+#ifndef _TSL2561_H_
+#define _TSL2561_H_
 
 #include "Arduino.h"
 #include <Wire.h>
@@ -39,9 +39,6 @@
 #include <std_msgs/UInt8MultiArray.h>
 #include <std_msgs/Empty.h>
 #include <std_msgs/Float32.h>
-
-
-
 
 
 #define  TSL2561_Control  0x80
@@ -111,13 +108,10 @@
 #define K8C 0x029a   // 1.3 * 2^RATIO_SCALE
 #define B8C 0x0000   // 0.000 * 2^LUX_SCALE
 #define M8C 0x0000   // 0.000 * 2^LUX_SCALE
-class TSL2561_CalculateLux : public Module
+
+class TSL2561_CalculateLux
 {
-
-
-public:
-
-  signed long readVisibleLux();
+  public:
   unsigned long calculateLux(unsigned int iGain, unsigned int tInt,int iType);
   void getLux(void);
   void init(void);
@@ -126,8 +120,7 @@ public:
 
 
  private:
-  uint8_t CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;
-  uint16_t ch0,ch1;
+  int CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;
   unsigned long chScale;
   unsigned long channel1;
   unsigned long channel0;
