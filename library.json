@@ -1,10 +1,10 @@
 {
-    "name": "openag_TSL2561_digital_light_sensor",
+    "name": "openag_TSL2561",
     "keywords": "openag, grove, digitallight",
     "description": "OpenAg driver for the Grove digital light sensor TSL2561",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OpenAgInitiative/openag_digital_light_TSL2561.git"
+        "url": "https://github.com/MisterBurnley/openag_TSL2561.git"
     },
     "frameworks": "arduino",
     "platforms": "*",
