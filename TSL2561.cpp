@@ -28,7 +28,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#include <openag_TSL2561.h>
+#include <TSL2561.h>
 #include <Arduino.h>
 #include <Wire.h>
 
