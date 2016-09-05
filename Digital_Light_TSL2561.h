@@ -116,9 +116,7 @@ class TSL2561_CalculateLux : public Module
 
 
 public:
-  void begin();
-  void update();
-  bool get_light_illuminance(std_msgs::UInt16 &msg);
+
   signed long readVisibleLux();
   unsigned long calculateLux(unsigned int iGain, unsigned int tInt,int iType);
   void getLux(void);
@@ -140,7 +138,7 @@ public:
   unsigned long lux;
 
  };
-//extern TSL2561_CalculateLux  TSL2561;
+extern TSL2561_CalculateLux  TSL2561;
 #endif
 
 
