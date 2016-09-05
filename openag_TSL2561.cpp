@@ -12,5 +12,5 @@ void TSL2561::update() {
   uint32_t curr_time = millis();
   Wire.begin();
   TSL2561.readVisibleLux();
-  
+  bool 
 }
