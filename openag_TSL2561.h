@@ -9,10 +9,8 @@
 
 class TSL2561 : public Module {
   public:
-  TS2561(int i2c_address);
   void begin();
   void update();
-  bool get_lux(std_msgs::Int32 &msg);
   
   private:
   TSL2561_I2C _sensor;
