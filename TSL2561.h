@@ -31,6 +31,8 @@
 #ifndef _TSL2561_H_
 #define _TSL2561_H_
 
+#iclude <Arduino.h>
+
 #define  TSL2561_Control  0x80
 #define  TSL2561_Timing   0x81
 #define  TSL2561_Interrupt 0x86
@@ -102,7 +104,7 @@
 class TSL2561_CalculateLux
 {
   public:
-  //signed long readVisibleLux();
+  signed long readVisibleLux();
   unsigned long calculateLux(unsigned int iGain, unsigned int tInt,int iType);
   void getLux(void);
   void init(void);
