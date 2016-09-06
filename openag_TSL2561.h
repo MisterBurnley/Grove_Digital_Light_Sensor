@@ -9,15 +9,17 @@
 
 class TSL2561 : public Module {
   public:
+  TSL2561(int i2c_address);
   void begin();
   void update();
+  bool get_light_illuminence(std_msgs::Int32 &msg);
   
   private:
   TSL2561_I2C _sensor;
   uint32_t _init_time;
   bool _initializing;
   uint32_t _time_of_last_reading;
-  const static uint32_t _min_update_interval = 2000;
+  
   bool _is_on;
   
   
