@@ -9,7 +9,7 @@
     ],
     "outputs": {
         "light_illuminence": {
-            "type": "std_msgs/UInt16"
+            "type": "std_msgs/UInt32"
         }
     },
     "dependencies": [
