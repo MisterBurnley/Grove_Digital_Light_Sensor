@@ -31,7 +31,7 @@
 #ifndef _TSL2561_H_
 #define _TSL2561_H_
 
-#iclude <Arduino.h>
+#include <Arduino.h>
 
 #define  TSL2561_Control  0x80
 #define  TSL2561_Timing   0x81
