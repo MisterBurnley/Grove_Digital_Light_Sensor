@@ -31,6 +31,7 @@
 #include <TSL2561.h>
 #include <Arduino.h>
 #include <Wire.h>
+
 uint8_t TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
 {
 
