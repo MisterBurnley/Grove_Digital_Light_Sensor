@@ -31,12 +31,10 @@
 #include <TSL2561.h>
 #include <Arduino.h>
 #include <Wire.h>
-
-
-int TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
+uint8_t TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
 {
 
-    int_t value;
+    uint8_t value;
      Wire.beginTransmission(deviceAddress);
      Wire.write(address);                // register to read
      Wire.endTransmission();
@@ -64,8 +62,8 @@ void TSL2561_CalculateLux::getLux(void)
     CH1_LOW=readRegister(TSL2561_Address,TSL2561_Channal1L);
     CH1_HIGH=readRegister(TSL2561_Address,TSL2561_Channal1H);
 
-    channal0 = CH0_HIGH*256+CH0_LOW;
-    channel1 = CH1_HIGH*256+CH1_LOW;
+    channal0 = (CH0_HIGH<<8) | CH0_LOW;
+    channel1 = (CH1_HIGH<<8) | CH1_LOW;
 }
 
 void TSL2561_CalculateLux::init()
@@ -73,26 +71,26 @@ void TSL2561_CalculateLux::init()
    writeRegister(TSL2561_Address,TSL2561_Control,0x03);  // POWER UP
    writeRegister(TSL2561_Address,TSL2561_Timing,0x00);  //No High Gain (1x), integration time of 13ms
    writeRegister(TSL2561_Address,TSL2561_Interrupt,0x00);
-   //writeRegister(TSL2561_Address,TSL2561_Control,0x00);  // POWER Down
+   writeRegister(TSL2561_Address,TSL2561_Control,0x00);  // POWER Down
 }
 
-//signed long TSL2561_CalculateLux::readVisibleLux()
-//{
-//   writeRegister(TSL2561_Address,TSL2561_Control,0x03);  // POWER UP
-//  delay(14);
-//   getLux();
+signed long TSL2561_CalculateLux::readVisibleLux()
+{
+   writeRegister(TSL2561_Address,TSL2561_Control,0x03);  // POWER UP
+   delay(14);
+   getLux();
 
-//   writeRegister(TSL2561_Address,TSL2561_Control,0x00);  // POWER Down
-//   if(ch1 == 0)
-//   { 
-//     return 0;
-//   }
-//   if(ch0/ch1 < 2 && ch0 > 4900)
-//   {
-//     return -1;  //ch0 out of range, but ch1 not. the lux is not valid in this situation.
-//   }
-//   return calculateLux(0, 0, 0);  //T package, no gain, 13ms
-//}
+   writeRegister(TSL2561_Address,TSL2561_Control,0x00);  // POWER Down
+   if(ch1 == 0)
+   { 
+     return 0;
+   }
+   if(ch0/ch1 < 2 && ch0 > 4900)
+   {
+     return -1;  //ch0 out of range, but ch1 not. the lux is not valid in this situation.
+   }
+   return calculateLux(0, 0, 0);  //T package, no gain, 13ms
+}
 
 unsigned long TSL2561_CalculateLux::calculateLux(unsigned int iGain, unsigned int tInt,int iType)
 {
