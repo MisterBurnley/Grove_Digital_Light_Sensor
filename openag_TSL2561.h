@@ -6,6 +6,7 @@
 #include "TSL2561.h"
 #include <openag_module.h>
 #include <std_msgs/Int32.h>
+#include <std_msgs/Int16.h>
 
 class TSL2561 : public Module {
   public:
@@ -13,6 +14,7 @@ class TSL2561 : public Module {
   void begin();
   void update();
   bool get_light_illuminence(std_msgs::Int32 &msg);
+  bool get_light_illuminence(std_msgs::Int16 &msg);
   
   private:
   TSL2561_I2C _sensor;
