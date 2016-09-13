@@ -16,15 +16,15 @@ class TSL2561 : public Module {
   
   private:
   TSL2561_I2C _sensor;
+  bool _send_light_illuminance;
   uint32_t _init_time;
   bool _initializing;
   uint32_t _time_of_last_reading;
-  
   bool _is_on;
   
   
   void readData();
-}
+};
 
 
 #endif
