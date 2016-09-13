@@ -13,8 +13,8 @@ class TSL2561 : public Module {
   TSL2561(int i2c_address);
   void begin();
   void update();
-  bool get_light_illuminence(std_msgs::Int32 &msg);
-  bool get_light_illuminence(std_msgs::Int16 &msg);
+  bool get_light_illuminance(std_msgs::Int32 &msg);
+  bool get_light_illuminance(std_msgs::Int16 &msg);
   
   private:
   TSL2561_I2C _sensor;
