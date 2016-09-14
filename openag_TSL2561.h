@@ -5,17 +5,17 @@
 #include "Wire.h"
 #include "TSL2561.h"
 #include <openag_module.h>
-#include <std_msgs/Int32.h>
+#include <std_msgs/Int64.h>
 
-class TSL2561 : public Module {
+class LIT2561 : public Module {
   public:
-  TSL2561(int i2c_address);
+  LIT2561(int i2c_address);
   void begin();
   void update();
-  bool get_light_illuminance(std_msgs::Int32 &msg);
+  bool get_light_illuminance(std_msgs::Int64 &msg);
   
   private:
-  TSL2561_I2C _sensor;
+  TSL2561 _sensor;
   bool _send_light_illuminance;
   uint32_t _init_time;
   bool _initializing;
