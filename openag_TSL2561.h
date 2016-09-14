@@ -1,5 +1,5 @@
-#ifndef OPENAG_TSL2561
-#define OPENAG_TSL2561
+#ifndef OPENAG_LIT2561
+#define OPENAG_LIT2561
 
 #include "Arduino.h"
 #include "Wire.h"
