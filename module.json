@@ -1,7 +1,7 @@
 {
     "description": "Driver for the Grove TSL2561 Digital Light Sensor",
     "class_name": "TSL2561",
-    "header_file": "openag_TSL2561.h",
+    "header_file": "openag_LIT2561.h",
     "arguments":[
         { 
             "name": "i2c_address",
@@ -11,7 +11,7 @@
     ],
     "outputs": {
         "light_illuminance": {
-            "type": "std_msgs/UInt32"
+            "type": "std_msgs/Int64"
         }
     },
     "dependencies": [
