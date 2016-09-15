@@ -43,7 +43,7 @@ if (_initializing) {
      else {
          if (status_level != ERROR) {
              status_level = ERROR;
-             status_msg = "Failed to read from sensor";
+             status_msg = "Boo Hoo Failed to read from sensor";
          }
          begin();
          }
@@ -51,6 +51,7 @@ if (_initializing) {
      }
 bool LIT2561::get_light_illuminance(std_msgs::Int64 &msg) {
   msg.data = _sensor.readVisibleLux();
+  msg.data = "OK";
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;
   return res;
