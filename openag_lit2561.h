@@ -15,7 +15,7 @@ class LIT2561 : public Module {
   bool get_light_illuminance(std_msgs::Int64 &msg);
   
   private:
-  TSL2561_CalculateLux _sensor;
+  TSL2561_Address _sensor;
   bool _send_light_illuminance;
   uint32_t _init_time;
   bool _initializing;
