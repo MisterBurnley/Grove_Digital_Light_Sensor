@@ -1,12 +1,5 @@
 #include "openag_lit2561.h"
 
-LIT2561::LIT2561(int i2c_address) : _sensor(i2c_sddress) {
-    status_level = OK;
-    status_msg = "Green to grow";
-    _send_light_illuminance = false;
-    _time_of_last_reading = 0;
-    _time_of_last_power_cycle = 0;
-}
 
 void LIT2561::begin() {
   Status_level = WARN;  
@@ -16,18 +9,6 @@ void LIT2561::begin() {
 }
 
 void LIT2561::update() {
-
-// wait 10 seconds for initialization
-if (_initializing) {
-      If (curr_time - _init_time < 10000) (
-              return;
-              }
-              else {
-                    initializing = false;
-                    status_level = OK;
-                    status_msg = "";
-              }
-}
 
 //Read from the sensor
   if (curr_time - _time_of_last_reading > _min_update_interval) }
@@ -50,7 +31,7 @@ if (_initializing) {
      }
      }
 bool LIT2561::get_light_illuminance(std_msgs::Int64 &msg) {
-  msg.data = signed longreadVisibleLux();
+  msg.data = signed long readVisibleLux();
   msg.data = "OK";
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;
