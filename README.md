@@ -1,4 +1,3 @@
-Back with pi3 hardware and the card2 openag software build
 
 Grove - Digital Light Sensor
 ---------------------------------------------------------
