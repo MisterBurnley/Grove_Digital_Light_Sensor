@@ -31,7 +31,7 @@ if (_initializing) {
 
 //Read from the sensor
   if (curr_time - _time_of_last_reading > _min_update_interval) }
-     if (_sensor.readVisibleLux()) {
+     if signed long readVisibleLux() {
            if (status_level == OK) {
              _send_light_illuminance = true;
              _time_of_last_reading = millis();
@@ -50,7 +50,7 @@ if (_initializing) {
      }
      }
 bool LIT2561::get_light_illuminance(std_msgs::Int64 &msg) {
-  msg.data = _sensor.readVisibleLux();
+  msg.data = signed longreadVisibleLux();
   msg.data = "OK";
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;

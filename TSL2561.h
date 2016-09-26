@@ -41,7 +41,7 @@
 #define  TSL2561_Channal1L 0x8E
 #define  TSL2561_Channal1H 0x8F
 
-//#define TSL2561_Address  0x29       //device address
+#define TSL2561_Address  0x29       //device address
 
 #define LUX_SCALE 14           // scale by 2^14
 #define RATIO_SCALE 9          // scale ratio by 2^9
@@ -110,7 +110,7 @@ class TSL2561_CalculateLux
   void init(void);
   uint8_t readRegister(int deviceAddress, int address);
   void writeRegister(int deviceAddress, int address, int val);
-  TSL2561_Address (int i2c_address);
+
 
  private:
   int CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;
