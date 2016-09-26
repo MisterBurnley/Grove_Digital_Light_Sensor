@@ -1,4 +1,4 @@
-Testing a push without committing any file changes other than this one.
+Back with pi3 hardware and the card2 openag software build
 
 Grove - Digital Light Sensor
 ---------------------------------------------------------
