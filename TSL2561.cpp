@@ -32,6 +32,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+
 uint8_t TSL2561_CalculateLux::readRegister(int deviceAddress, int address)
 {
 
@@ -56,15 +57,15 @@ void TSL2561_CalculateLux::writeRegister(int deviceAddress, int address, int val
 }
 
 void TSL2561_CalculateLux::getLux(void)
-{
+{  
     CH0_LOW=readRegister(TSL2561_Address,TSL2561_Channal0L);
     CH0_HIGH=readRegister(TSL2561_Address,TSL2561_Channal0H);
     //read two bytes from registers 0x0E and 0x0F
     CH1_LOW=readRegister(TSL2561_Address,TSL2561_Channal1L);
     CH1_HIGH=readRegister(TSL2561_Address,TSL2561_Channal1H);
 
-    channal0 = (CH0_HIGH<<8) | CH0_LOW;
-    channel1 = (CH1_HIGH<<8) | CH1_LOW;
+    ch0 = (CH0_HIGH<<8) | CH0_LOW;
+    ch1 = (CH1_HIGH<<8) | CH1_LOW;
 }
 
 void TSL2561_CalculateLux::init()

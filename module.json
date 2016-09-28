@@ -11,7 +11,7 @@
     ],
     "outputs": {
         "light_illuminance": {
-            "type": "std_msgs/Int64"
+            "type": "std_msgs/Int32"
         }
     },
     "dependencies": [

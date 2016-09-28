@@ -1,30 +1,34 @@
 #include "openag_lit2561.h"
 
+LIT2561::LIT2561(int i2c_address) {
+
+}
 
 void LIT2561::begin() {
-  status_level = OK;  
-  status_msg = "Sap is rising";
-  _init_time = millis();
-  _initialzing = true;
+
+  TSL2561.init();
+  delay(100);
+  TSL2561.readVisibleLux();
+  delay(1000);
+
 }
 
 void LIT2561::update() {
 
+
 //Read from the sensor
-  if (curr_time - _time_of_last_reading > _min_update_interval) }
-     if (signed long readVisibleLux()) {
-           if (status_level == OK) {
-             _send_light_illuminance = true;
-             _time_of_last_reading = millis();
+
+     if (TSL2561.readVisibleLux()) {
+         _send_light_illuminance = true;
            }
            else {
             begin();
            }
      }
 
-bool LIT2561::get_light_illuminance(std_msgs::Int64 &msg) {
-  msg.data = signed long readVisibleLux();
-  msg.data = "OK";
+
+bool LIT2561::get_light_illuminance(std_msgs::Int32 &msg) {
+  msg.data = TSL2561.readVisibleLux();
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;
   return res;

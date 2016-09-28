@@ -114,6 +114,7 @@ class TSL2561_CalculateLux
 
  private:
   int CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;
+  uint16_t ch0,ch1;
   unsigned long chScale;
   unsigned long channel1;
   unsigned long channel0;
