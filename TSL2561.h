@@ -41,7 +41,7 @@
 #define  TSL2561_Channal1L 0x8E
 #define  TSL2561_Channal1H 0x8F
 
-#define TSL2561_Address  0x29       //device address
+#define TSL2561_Address  0x39       //device address
 
 #define LUX_SCALE 14           // scale by 2^14
 #define RATIO_SCALE 9          // scale ratio by 2^9
