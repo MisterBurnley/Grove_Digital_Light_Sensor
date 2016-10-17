@@ -28,7 +28,7 @@ void LIT2561::update() {
 
 
 bool LIT2561::get_light_illuminance(std_msgs::Int32 &msg) {
-  msg.data = TSL2561.readVisibleLux();
+  msg.data = (TSL2561.readVisibleLux());
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;
   return res;
