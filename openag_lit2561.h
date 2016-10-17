@@ -10,7 +10,7 @@
 class LIT2561 : public Module {
   public:
 
-  LIT2561(int i2c_address);
+  LIT2561 (int i2c_address);
   void begin();
   void update();
   bool get_light_illuminance(std_msgs::Int32 &msg);
