@@ -9,7 +9,7 @@ void LIT2561::begin() {
   TSL2561.init();
   delay(100);
   TSL2561.readVisibleLux();
-  delay(1000);
+  delay(100);
 
 }
 
