@@ -7,7 +7,7 @@ LIT2561::LIT2561(int i2c_address) {
 void LIT2561::begin() {
 
   TSL2561.init();
-//  delay(100);
+  delay(100);
   TSL2561.readVisibleLux();
 //  delay(100);
 
