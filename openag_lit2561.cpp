@@ -8,6 +8,7 @@ void LIT2561::begin() {
 
   TSL2561.init();
   delay(100);
+  Serial.begin(9600);
   TSL2561.readVisibleLux();
 //  delay(100);
 
